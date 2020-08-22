@@ -55,9 +55,10 @@ if __name__ == "__main__":
     print_sub_counter(subject)    
     
     print('\n')
+
+
     # Call the update method on all the subscribers
     # This will cause them to increment their counters by 5
-    
     print('updating the subscribers')
     subject.notify()
     
