@@ -49,17 +49,16 @@ if __name__ == "__main__":
     
     # print out the subscriber list and current update value in the subscriber objects
     print(f'the following subscribers are registered:')
-    print(subject.print_subscribers(), "\n")
+    print(subject.print_subscribers(), '\n')
     
     print('current subscriber update value')
     print_sub_counter(subject)    
-    
     print('\n')
 
 
     # Call the update method on all the subscribers
     # This will cause them to increment their counters by 5
-    print('updating the subscribers')
+    print('!----------------updating the subscribers------------------!\n')
     subject.notify()
     
     # let's check the counter now to ensure the update method worked
