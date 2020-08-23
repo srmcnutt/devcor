@@ -49,6 +49,7 @@ def print_sub_counter(subject):
     for sub in subject.subscribers:
         print(f'{sub}: value: {sub.counter}')
 
+
 if __name__ == "__main__":
     
     subject = Subject('subject')
@@ -59,7 +60,7 @@ if __name__ == "__main__":
         name = RedObserver(name)
         subject.register(name)
 
-        # make 5 blue observers and register with the subject
+    # make 5 blue observers and register with the subject
     for x in range(5):
         name = f'Blue subscriber{x+1}'
         name = BlueObserver(name)
