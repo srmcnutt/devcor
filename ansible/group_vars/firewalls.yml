@@ -1,0 +1,10 @@
+---
+# connectivity
+ansible_python_interpreter: "/usr/bin/env python"
+ansible_network_os: "ios"
+ansible_user: "cisco"
+ansible_password: "cisco"
+
+# user data
+config:
+  - "crypto isakmp aggressive-mode disable"

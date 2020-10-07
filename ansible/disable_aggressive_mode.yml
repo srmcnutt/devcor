@@ -1,0 +1,16 @@
+---
+- name: "disable ike aggressive moder"
+  hosts: routers
+  tasks:
+    - name: "disable ike aggressive mode on router"
+      cisco.ios.ios_config:
+        lines: "{{ config }}"
+      register: cli_output
+
+    - name: "save configuration if modified"
+      cisco.ios.ios_config:
+        save_when: modified
+        
+    - name: "print collected output"
+      debug:
+        var: cli_output
